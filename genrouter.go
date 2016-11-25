@@ -149,7 +149,7 @@ func main() {
 		meth := strings.ToUpper(rout.Method)
 		switch meth {
 		case "GET", "POST", "DELETE", "PUT", "OPTIONS", "HEAD":
-			fmt.Fprintf(gen, "\trouter.%v(\"%v\", %v.%v)\n", meth, rout.Path, rout.Pkg, rout.Method)
+			fmt.Fprintf(gen, "\trouter.%v(\"%v\", %v.%v)\n", meth, rout.Path, rout.Pkg, rout.Func)
 		}
 	}
 	fmt.Fprintf(gen, "\treturn router\n")
